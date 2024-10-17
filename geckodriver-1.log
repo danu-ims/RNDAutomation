@@ -1,0 +1,15 @@
+1726762506132	geckodriver	INFO	Listening on 127.0.0.1:55172
+1726762509198	mozrunner::runner	INFO	Running command: "C:\\Users\\Danu\\.cache\\selenium\\firefox\\win64\\130.0.1\\firefox.exe" "--marionette" "--remote-debugging ... localhost" "-no-remote" "-profile" "C:\\Users\\Danu\\AppData\\Local\\robocorp\\temp\\9c79226d9d993e54\\rust_mozprofile9ttWxd"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1726762509429	Marionette	INFO	Marionette enabled
+1726762509508	Marionette	INFO	Listening on port 55196
+WebDriver BiDi listening on ws://127.0.0.1:55173
+Read port: 55196
+1726762509705	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: LoginRecipes: "Falling back to a synchronous message for: http://147.139.191.88:9100."
+JavaScript error: , line 0: uncaught exception: WebSocket is not in the OPEN state
+JavaScript error: resource://gre/actors/FormHandlerChild.sys.mjs, line 103: InvalidStateError: JSWindowActorChild.document getter: Cannot access property 'document' after actor 'FormHandler' has been destroyed
+1726762561867	Marionette	INFO	Stopped listening on port 55196
+Dynamically enable window occlusion 1

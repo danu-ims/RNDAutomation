@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-10-14T14:36:41.383379" rpa="false" schemaversion="5">
+<suite id="s1" name="GeneralCode" source="D:\RPA\automation\RPAAutomation\automation\IFINLOS\GeneralCode.robot">
+<test id="s1-t1" name="General Code" line="23">
+<kw name="Login To IFINLOS">
+<kw name="Open Browser &amp; Login" owner="BaseKeywords">
+<kw name="Create Webdriver">
+<msg time="2024-10-14T14:36:41.449244" level="FAIL">No keyword with name 'Create Webdriver' found.</msg>
+<arg>Firefox</arg>
+<status status="FAIL" start="2024-10-14T14:36:41.449244" elapsed="0.000000">No keyword with name 'Create Webdriver' found.</status>
+</kw>
+<kw name="Open Browser">
+<arg>${BASEURL}</arg>
+<status status="NOT RUN" start="2024-10-14T14:36:41.449244" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" start="2024-10-14T14:36:41.449244" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>name:UserName</arg>
+<status status="NOT RUN" start="2024-10-14T14:36:41.449244" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>name:Password</arg>
+<status status="NOT RUN" start="2024-10-14T14:36:41.449244" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text">
+<arg>name:UserName</arg>
+<arg>${UserName}</arg>
+<status status="NOT RUN" start="2024-10-14T14:36:41.450245" elapsed="0.000000"/>
+</kw>
+<kw name="Input Password">
+<arg>name:Password</arg>
+<arg>${Password}</arg>
+<status status="NOT RUN" start="2024-10-14T14:36:41.450245" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button">
+<arg>//button[@type="submit"]</arg>
+<status status="NOT RUN" start="2024-10-14T14:36:41.450245" elapsed="0.000000"/>
+</kw>
+<arg>Yaqi</arg>
+<arg>Yaqi</arg>
+<status status="FAIL" start="2024-10-14T14:36:41.447244" elapsed="0.003001">No keyword with name 'Create Webdriver' found.</status>
+</kw>
+<kw name="Open Card" owner="BaseKeywords">
+<arg>IFINLOS</arg>
+<status status="NOT RUN" start="2024-10-14T14:36:41.450245" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-10-14T14:36:41.447244" elapsed="0.003001">No keyword with name 'Create Webdriver' found.</status>
+</kw>
+<kw name="Navigate To General Code">
+<status status="NOT RUN" start="2024-10-14T14:36:41.451244" elapsed="0.000000"/>
+</kw>
+<kw name="Logout" owner="BaseKeywords">
+<status status="NOT RUN" start="2024-10-14T14:36:41.451244" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-10-14T14:36:41.446245" elapsed="0.004999">No keyword with name 'Create Webdriver' found.</status>
+</test>
+<status status="FAIL" start="2024-10-14T14:36:41.386376" elapsed="0.065868"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="GeneralCode">GeneralCode</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-10-14T14:36:41.445246" level="ERROR">Error in file 'D:\RPA\automation\RPAAutomation\resources\Base\BaseKeywords.robot' on line 2: Resource file 'resources\Base\BaseVariables.robot' does not exist.</msg>
+</errors>
+</robot>

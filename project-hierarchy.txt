@@ -1,0 +1,83 @@
+RPAAutomation
+├─ automation
+│  ├─ IFINBASE
+│  │  ├─ IFINBASE.robot
+│  │  ├─ TaskCases
+│  │  └─ TestCases
+│  │     ├─ Benchmark.robot
+│  │     ├─ GeneralCode.robot
+│  │     ├─ GeneralCodea.robot
+│  │     └─ OJKReference.robot
+│  ├─ IFINLOS
+│  │  └─ GeneralCode.robot
+│  └─ IFINSYS
+│     ├─ IFINSYS.robot
+│     └─ TestCases
+│        ├─ GeneralCode.robot
+│        ├─ Login.robot
+│        └─ Menu.robot
+├─ conda.yaml
+├─ files
+│  ├─ excel
+│  │  ├─ GeneralCode - Copy (2).xlsx
+│  │  ├─ GeneralCode - Copy.xlsx
+│  │  ├─ GeneralCode.xlsx
+│  │  ├─ GeneralCode2.xlsx
+│  │  ├─ GeneralCodea.xlsx
+│  │  └─ ~$GeneralCode.xlsx
+│  └─ fileocr
+│     ├─ ahu
+│     │  ├─ AHU - BCI 27062024.pdf
+│     │  └─ AHU - HRS 14052024.pdf
+│     └─ bankmutation
+│        ├─ bcacorporate
+│        │  └─ BCA_CORPORATE.pdf
+│        ├─ bcapersonal
+│        │  ├─ 545539058-Rekening-Koran-Maret.pdf
+│        │  ├─ 587100261-1970880948Mei2022.pdf
+│        │  └─ 617516674-1390563121Jul2022-1.pdf
+│        ├─ bnicorporate
+│        │  └─ BNI_CORPORATE.pdf
+│        ├─ bripersonal
+│        │  └─ BRI_PERSONAL.pdf
+│        ├─ cimbpersonal
+│        │  └─ CIMB_PERSONAL.pdf
+│        ├─ danamonpersonal
+│        │  └─ DANAMON_PERSONAL.pdf
+│        ├─ ocbcpersonal
+│        │  └─ OCBC_PERSONAL.pdf
+│        └─ permatapersonal
+│           └─ PERMATA_PERSONAL.pdf
+├─ geckodriver-1.log
+├─ interactive_console_output.xml
+├─ LICENSE
+├─ log.html
+├─ output
+│  ├─ environment_windows_amd64_freeze.yaml
+│  ├─ geckodriver-1.log
+│  ├─ journal.run
+│  ├─ log.html
+│  ├─ output.xml
+│  ├─ selenium-screenshot-1.png
+│  ├─ stderr.log
+│  └─ stdout.log
+├─ output.xml
+├─ project-hierarchy.txt
+├─ rcc.exe
+├─ README.md
+├─ report.html
+├─ resources
+│  ├─ Base
+│  │  ├─ BaseKeywords.robot
+│  │  ├─ BaseVariables.robot
+│  │  ├─ InsertDataToExcel.robot
+│  │  └─ ReadDataExcel.robot
+│  └─ CustomLib
+│     ├─ InputField.py
+│     └─ UploadFile.py
+├─ robot.yaml
+├─ Run Test.bat
+└─ trigger
+   └─ IFINSYS
+      └─ eventtrigger
+         └─ ConsumerMessageKafka.py
