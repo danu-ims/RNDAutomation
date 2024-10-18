@@ -57,19 +57,19 @@ Add New Branch
     Input Field                      Code                                                                                    ${code}
     Click DDL                        ifin-form-ddl-branchtype                                                                ${Type}
     Click Switch                     IsSyariah
-    
-    Click Switch                     IsActive
-    Input Field                      Name                                                                                    ${Name}
-    Input Field                      PhoneNo                                                                                 ${PhoneNo}
-    Click Lookup With Search         SysRegionBranchID                                                                       ${Region}
-    Click Lookup With Search         SysProvinceID                                                                           ${Province}
-    Click Lookup With Search         SysCityID                                                                               ${City}
-    Click Lookup With Search         SysZipCodeID                                                                            ${ZipCode}
-    Input Field                      Rt                                                                                      ${RT}
-    Input Field                      Rw                                                                                      ${RW}
-    Input Field                      Address                                                                                 ${Address}
+
+    Click Switch                IsActive
+    Input Field                 Name                 ${Name}
+    Input Field                 PhoneNo              ${PhoneNo}
+    Click Lookup With Search    SysRegionBranchID    ${Region}
+    Click Lookup With Search    SysProvinceID        ${Province}
+    Click Lookup With Search    SysCityID            ${City}
+    Click Lookup With Search    SysZipCodeID         ${ZipCode}
+    Input Field                 Rt                   ${RT}
+    Input Field                 Rw                   ${RW}
+    Input Field                 Address              ${Address}
     Click Submit
-    ${current_parent} =              Set Variable                                                                            ${code}
+    ${current_parent} =         Set Variable         ${code}
     END
 
         # Check for sub entry
@@ -94,14 +94,25 @@ Add New Branch
     Click Element                    //input[@id='EffDate']/following-sibling::button
     Wait Until Element Is Visible    //span[text()='15']
     Click Element                    //span[text()='15']
+    # Wait Until Element Is Visible    //input[@id='ExpDate']/following-sibling::button
+    # Click Element                    //input[@id='ExpDate']/following-sibling::button
+    # Wait Until Element Is Visible    //span[text()='17']
+    # Click Element                    //span[text()='17']
+
+    # ${ReformatEffectiveDate}    Convert Date                                                       ${EffectiveDate}            result_format=%d/%m/%Y
+    # ${ReformatExpiredDate}      Convert Date                                                       ${ExpiredDate}
+
     Wait Until Element Is Visible    //input[@id='ExpDate']/following-sibling::button
     Click Element                    //input[@id='ExpDate']/following-sibling::button
-    Wait Until Element Is Visible    //span[text()='17']
-    Click Element                    //span[text()='17']
-    # ${ReformatEffectiveDate}    Convert Date                                                       ${EffectiveDate}            result_format=%d/%m/%Y
-    # ${ReformatExpiredDate}      Convert Date                                                       ${ExpiredDate}              result_format=%d/%m/%Y
-    # Input Field                 EffDate                                                            ${ReformatEffectiveDate}
-    # Input Field                 ExpDate                                                            ${ReformatExpiredDate}
+    Wait Until Element Is Visible    //span[text()='ReformatExpiredDate conver to day in here']
+    Click Element                    //span[text()='${ReformatExpiredDate conver to day in here}']
+
+    # Month Conversion
+    # [Arguments] ${Date}
+    # ${Month}=    Convert Date    ${Date}    result_format=%B
+    # [Return]   ${Month}
+
+
     Click Submit
     END
 
