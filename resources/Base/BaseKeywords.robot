@@ -63,7 +63,9 @@ Click Lookup With Search
     [Arguments]                      ${LookupName}                                                                                                  ${Search}
     Wait Until Element Is Visible    xpath=//label[@for="${LookupName}" and contains(@class, 'rz-label')]/following::button[1]                      
     Click Element                    xpath=//label[@for="${LookupName}" and contains(@class, 'rz-label')]/following::button[1]
+    Wait Until Element Is Visible    xpath=//div[@class='rz-card rz-variant-filled ifinancing360-modal-content']//input[@id='ifin-searchbar']
     Input Text                       xpath=//div[@class='rz-card rz-variant-filled ifinancing360-modal-content']//input[@id='ifin-searchbar']       ${Search}
+    Wait Until Element Is Visible    xpath=//div[@class='rz-card rz-variant-filled ifinancing360-modal-content']//tr[1]//button[@title='Select']
     Click Element                    xpath=//div[@class='rz-card rz-variant-filled ifinancing360-modal-content']//tr[1]//button[@title='Select']
 
 Click Lookup
@@ -72,13 +74,27 @@ Click Lookup
     Click Element                    xpath=//label[@for="${LookupName}" and contains(@class, 'rz-label')]/following::button[1]
     Click Element                    //tr[1]//button[normalize-space()='Select']
 
+# Click DatePicker
+#    [Arguments]                      ${LookupName}                   ${Date}
+#    Click Element                    id=${LookupName}
+#    Wait Until Element Is Visible    class=rz-datepicker-group
+#    Click Element                    xpath=//td[text()='${Date}']    
+
+Click DatePicker
+    Wait Until Element Is Visible    xpath=//label[contains(text(),'${LABEL_TEXT}')]/following::div[contains(@class,'rz-switch')][1]
+    Click Element                    xpath=//label[contains(text(),'${LABEL_TEXT}')]/following::div[contains(@class,'rz-switch')][1]
+
+Click Switch
+    [Arguments]           ${InputName}
+    Execute JavaScript    document.querySelector('input[name="${InputName}"]').click();
+
 Click DDL
     [Arguments]                      ${DDLID}           ${OptionValue}
     ${PathDropDown} =                Set Variable       //*[@id='${DDLID}']
     ${PathOption} =                  Set Variable       //li[@role='option' and @aria-label='${OptionValue}']
-    Wait Until Element Is Visible    ${PathDropDown}    timeout=10
+    Wait Until Element Is Visible    ${PathDropDown}    
     Click Element                    ${PathDropDown}
-    Wait Until Element Is Visible    ${PathOption}      timeout=10
+    Wait Until Element Is Visible    ${PathOption}      
     Click Element                    ${PathOption}
 # Click DDL
 #    [Arguments]                      ${IdDdl}
@@ -228,8 +244,13 @@ Open To Edit Data Eff Date
 
 Open Wizard
     [Arguments]                    ${WizardName}
-    Wait Until Element Contains    xpath=//a[@role='tab'][span[text()="${WizardName}"]]    ${WizardName}
-    Click Element                  xpath=//a[@role='tab'][span[text()="${WizardName}"]]
+    Wait Until Element Contains    //span[(contains(text(), "${WizardName}"))]    ${WizardName}
+    Click Element                  //span[(contains(text(), "${WizardName}"))]
+
+# Open Wizard
+#    [Arguments]                    ${WizardName}
+#    Wait Until Element Contains    xpath=//a[@role='tab'][span[text()="${WizardName}"]]    ${WizardName}
+#    Click Element                  xpath=//a[@role='tab'][span[text()="${WizardName}"]]
 
 
 

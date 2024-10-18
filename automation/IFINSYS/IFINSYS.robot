@@ -9,7 +9,7 @@ Resource    resources/Base/ReadDataExcel.robot
 Login IFINSYS
 
     [Setup]                 Set Selenium Speed    0.2 seconds
-    Open Browser & Login    Yaqi                  Yaqi
+    Open Browser & Login    Danu                  Danu
     Open Card               Config
 Branch
     Navigate To Branch
